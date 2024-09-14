@@ -11,3 +11,4 @@
 /src/Domain/obj
 /src/Persistence/bin/Debug/net8.0
 /src/Persistence/obj
+/.vs
