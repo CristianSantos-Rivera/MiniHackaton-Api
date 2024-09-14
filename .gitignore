@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/Api/bin/Debug/net8.0
+/.vs/MiniHackaton-Api/CopilotIndices/0.2.1634.3922
+/src/Api/obj
+/src/Application/bin/Debug/net8.0
+/src/Application/obj
+/src/Domain/bin/Debug/net8.0
+/src/Domain/obj
+/src/Persistence/bin/Debug/net8.0
+/src/Persistence/obj
