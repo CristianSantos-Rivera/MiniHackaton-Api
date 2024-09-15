@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MiniHackaton.Domain.Entities
 {
     [Table("mentorspecializations")]
-    internal class Mentorspecialization : BaseAuditableEntity
+    public class Mentorspecialization : BaseAuditableEntity
     {
         //user_id uuid NOT NULL DEFAULT gen_random_uuid(),
         [Column("mentor_id")]

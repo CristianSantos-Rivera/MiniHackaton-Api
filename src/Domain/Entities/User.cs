@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MiniHackaton.Domain.Entities
 {
     [Table("users")]
-    internal class User : BaseAuditableEntity
+    public class User : BaseAuditableEntity
     {
         //user_id uuid NOT NULL DEFAULT gen_random_uuid(),
         [Key]

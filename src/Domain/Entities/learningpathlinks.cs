@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MiniHackaton.Domain.Entities
 {
     [Table("learningpathlinks")]
-    internal class Learningpathlink : BaseAuditableEntity
+    public class Learningpathlink : BaseAuditableEntity
     {
         //user_id uuid NOT NULL DEFAULT gen_random_uuid(),
         [Column("path_id")]
