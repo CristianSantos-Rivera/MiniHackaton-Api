@@ -12,14 +12,24 @@ namespace MiniHackaton.Domain.Entities
         //specialization_id uuid,
         public string title { get; set; }
         public string description { get; set; }
-    //    CONSTRAINT learningpaths_pkey PRIMARY KEY (path_id),
-    //CONSTRAINT learningpaths_mentor_id_fkey FOREIGN KEY (mentor_id)
-    //    REFERENCES public.mentors(mentor_id) MATCH SIMPLE
-    //    ON UPDATE NO ACTION
-    //    ON DELETE CASCADE,
+
+        [Column("mentor_id")]
+        public Guid MentorId { get; set; }
+
+        public virtual Mentor Mentor { get; set; }
+
+        [Column("specialization_id")]
+        public Guid SpecializationId { get; set; }
+
+        public virtual Specialization Specialization { get; set; }
+
+
+
+}
+
     //CONSTRAINT learningpaths_specialization_id_fkey FOREIGN KEY(specialization_id)
     //    REFERENCES public.specializations(specialization_id) MATCH SIMPLE
     //    ON UPDATE NO ACTION
     //    ON DELETE CASCADE
     }
-}
+
