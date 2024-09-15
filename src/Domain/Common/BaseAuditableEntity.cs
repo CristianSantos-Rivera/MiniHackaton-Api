@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MiniHackaton.Domain.Common
 {
@@ -8,15 +9,14 @@ namespace MiniHackaton.Domain.Common
         {
             DateTime date = DateTime.UtcNow;
             DateCreated = date;
-            DateUpdated = date;
-            IsActive = true;
+            
         }
 
-        [DefaultValue(true)]
-        public bool IsActive { get; set; }
+        
+        
 
+        [Column("created_at")]
         public DateTime DateCreated { get; set; }
-
-        public DateTime? DateUpdated { get; set; }
     }
+        
 }
