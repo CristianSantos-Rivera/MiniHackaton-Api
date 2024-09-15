@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MiniHackaton.Persistence.Contexts;
-using MiniHackaton.Persistence.Repositories;
+using MiniHackaton.Api.Contexts;
 
 namespace Evner.Api.Extensions
 {
@@ -10,15 +9,5 @@ namespace Evner.Api.Extensions
             => services.AddDbContext<AppDbContext>(options => options
                        .UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
-        internal static IServiceCollection AddApplicationRepositories(this IServiceCollection services)
-        {
-            services.AddScoped(typeof(BaseRepository<>), typeof(BaseRepository<>));
-            return services;
-        }
-
-        internal static IServiceCollection AddApplicationServices(this IServiceCollection services)
-        {
-            return services;
-        }
     }
 }
